@@ -17,12 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
-    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
-
-    UITabBarController *tabVC = (UITabBarController *)self.window.rootViewController;
-    tabVC.selectedIndex = 2;
+    
+//    UITabBarController *tabVC = (UITabBarController *)self.window.rootViewController;
+//    tabVC.selectedIndex = 2;
     
     return YES;
 }

@@ -59,7 +59,7 @@
         <!--Third-->
         <scene sceneID="gcw-Nq-Wgt">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eer-Y0-n8D" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eer-Y0-n8D" customClass="BaseNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Third" image="Third" id="52A-ik-xX5"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>

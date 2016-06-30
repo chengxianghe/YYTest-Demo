@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142C9E6D1D24FF5D00706E7A /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142C9E6C1D24FF5D00706E7A /* BaseNavigationController.m */; };
 		1456F9151C521E8200E1D707 /* ResourceJoke.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1456F9141C521E8200E1D707 /* ResourceJoke.bundle */; };
 		14579A511C5F02F600717E7B /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 14579A501C5F02F600717E7B /* NSDate+Utilities.m */; };
 		14A036171C20F8F5003F7346 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A036161C20F8F5003F7346 /* main.m */; };
@@ -58,6 +59,8 @@
 
 /* Begin PBXFileReference section */
 		0632D1120C86DF46B7C6BCFC /* libPods-YYTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YYTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		142C9E6B1D24FF5D00706E7A /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		142C9E6C1D24FF5D00706E7A /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		1456F9141C521E8200E1D707 /* ResourceJoke.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ResourceJoke.bundle; sourceTree = "<group>"; };
 		14579A4F1C5F02F600717E7B /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
 		14579A501C5F02F600717E7B /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
@@ -346,6 +349,8 @@
 		14E6FF3D1C461C900041E2BC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				142C9E6B1D24FF5D00706E7A /* BaseNavigationController.h */,
+				142C9E6C1D24FF5D00706E7A /* BaseNavigationController.m */,
 				14E82BE11C4CB89B005C1512 /* ThirdViewController.h */,
 				14E82BE21C4CB89B005C1512 /* ThirdViewController.m */,
 				14EB15AA1C6050C700F15518 /* VideoDetailController.h */,
@@ -545,6 +550,7 @@
 				14E601F61C4787A40041E2BC /* UIView+YYAdd.m in Sources */,
 				14E82C0A1C50E9FC005C1512 /* JokeHelper.m in Sources */,
 				14E82BE31C4CB89B005C1512 /* ThirdViewController.m in Sources */,
+				142C9E6D1D24FF5D00706E7A /* BaseNavigationController.m in Sources */,
 				14E82BF91C4DD27C005C1512 /* RequestHelper.m in Sources */,
 				14EB15AC1C6050C700F15518 /* VideoDetailController.m in Sources */,
 				14E82C011C50E41E005C1512 /* AFNetworkHelper.m in Sources */,

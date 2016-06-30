@@ -108,8 +108,6 @@
     
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self.tabBarController.tabBar setHidden:NO];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
     
 }
 
@@ -118,7 +116,6 @@
     
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     [self.tabBarController.tabBar setHidden:YES];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
 }
 
 - (void)dealloc {
@@ -129,9 +126,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
-    
-    //    self.mview = [[MoviePlayer alloc] initWithFrame:CGRectZero title:@"测试视频" URL:_url];
-    
+        
     if (self.videoModel.fetch_play_url) {
         NSURL *url = self.videoModel.vplay_url;
         
@@ -159,7 +154,7 @@
     //    http://49.4.178.176:80/vplay.aixifan.com/des/20160130/3140937_MP4/3140937_480p.mp4?k=9cf9bdb9e759101764aad0f8dd292781&t=1454387542
     [self configUI];
     
-    [self configRefresh];
+//    [self configRefresh];
 }
 
 - (void)configUI {
@@ -188,40 +183,33 @@
         _tableView.top -= 64;
         _tableView.height += 20;
     }
-    
-    //http://us.sinaimg.cn/001rWPmqjx072RpR07P2050401012ZiM0k01.mp4?KID=unistore,video
-    //pluginspage="http://get.adobe.com/cn/flashplayer/" height="480" width="100%" src="http://js.t.sinajs.cn/t5/album/static/swf/video/player.swf?_vdad90e594db2c334" flashvars="file=http%3A%2F%2Fus.sinaimg.cn%2F000OJaM5jx072RpRntv90504010000310k01.m3u8%3FKID%3Dunistore%2Cvideo%26Expires%3D1467260256%26ssig%3DeDoJ3jbZXl&amp;fid=1034:ea443f165fe1574069ff860d899a698b&amp;uid=3655689037&amp;monitor=&amp;vf=vshow">
-    
 }
 
-- (void)configRefresh {
-    @weakify(self);
-    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        
-        if ([weak_self.tableView.mj_footer isRefreshing]) {
-            [weak_self.tableView.mj_header endRefreshing];
-            return;
-        }
-        
-//        [weak_self requestVideoDetailIsGetMore:NO];
-
-    }];
-    
-    _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        
-        if ([weak_self.tableView.mj_header isRefreshing]) {
-            [weak_self.tableView.mj_footer endRefreshing];
-            return;
-        }
-
-//        [weak_self requestVideoDetailIsGetMore:YES];
-
-    }];
-    [(MJRefreshAutoNormalFooter *)_tableView.mj_footer setTitle:@"" forState:MJRefreshStateIdle];
-}
+//- (void)configRefresh {
+//    @weakify(self);
+//    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+//        
+//        if ([weak_self.tableView.mj_footer isRefreshing]) {
+//            [weak_self.tableView.mj_header endRefreshing];
+//            return;
+//        }
+////        [weak_self requestVideoDetailIsGetMore:NO];
+//    }];
+//    
+//    _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+//        
+//        if ([weak_self.tableView.mj_header isRefreshing]) {
+//            [weak_self.tableView.mj_footer endRefreshing];
+//            return;
+//        }
+//
+////        [weak_self requestVideoDetailIsGetMore:YES];
+//
+//    }];
+//    [(MJRefreshAutoNormalFooter *)_tableView.mj_footer setTitle:@"" forState:MJRefreshStateIdle];
+//}
 
 - (void)sessionLocationURL:(NSString *)url {
-    
     if (url) {
         // 这个重定向的url
         NSLog(@"重定向:%@", url);
@@ -232,13 +220,9 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)moviePlayerOnBackAction {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (void)moviePlayerCompletionAction:(id)player {
-    NSLog(@"播放结束了啊: %@", [player class]);
-}
+//- (UIStatusBarStyle)preferredStatusBarStyle {
+//    return UIStatusBarStyleLightContent;
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
